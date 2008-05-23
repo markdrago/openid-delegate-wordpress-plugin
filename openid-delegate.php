@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: OpenID Delegation
-Plugin URI: http://eran.sandler.co.il/openid-delegate-wordpress-plugin/
+Plugin URI: http://git.markdrago.com/git/?p=openid-delegate-wordpress-plugin
 Description: Adds OpenID delegation to a WordPress blog allowing users to authenticate/signin/signup to OpenID supported sites with their blog's URL.
-Version: 0.1
-Author: Eran Sandler
-Author URI: http://eran.sandler.co.il
+Version: 0.2
+Author: Eran Sandler / Mark Drago
+Author URI: http://www.markdrago.com
 */
 
 /*
@@ -42,6 +42,19 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
   * Sun Jan 7 2007 - v0.1
     - Initial release
+  * Fri May 23 2008 - v0.2
+    - Support placing tags on home page when it is a page and not a post
+*/
+
+/*
+   This plugin was originally written by Eran Sandler.  Nearly all of the code
+   here was written by him.  I (Mark Drago) wrote a small patch to make the
+   plugin place the tags on the home page when it is a page and not a post.  I
+   sent a patch to Eran but he never updated his page with the patched code.
+   When I nearly lost my change during an upgrade of wordpress I decided that
+   I should put it in a repository and make it available to other people b/c
+   they may find it useful.  I'm open to any and all patches.  If you make a
+   change, please send it my way.
 */
 
 function openiddelegate_add_pages() {
