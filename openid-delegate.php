@@ -129,8 +129,14 @@ function openiddelegate_options_page() {
 
 function openiddelegate_add_meta_tags() {
 	global $posts;
+	global $post; 
 
-	if (is_home()) {
+	$id = $post->ID;
+	$show_on_front = get_option('show_on_front');
+	$page_on_front = get_option('page_on_front');
+
+	if (($show_on_front == 'page' && $page_on_front == $id) ||
+	    ($show_on_front != 'page' && is_home())) {
 		$xrdsurl = get_option('openiddelegate_xrdsurl');
 		$openidserverurl = get_option('openiddelegate_serverurl');
 		$openiddelegateurl = get_option('openiddelegate_delegateurl');
